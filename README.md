@@ -35,26 +35,13 @@ serverless invoke -f hello -l
 serverless remove
 ```
 
+## To use the database
+
+> remove the .spec extension from the db.spec.js file and update the db.js file data with the database information
+
 ## Tools used
 - JEST
 - SERVERLESS
 - NODEJS
 - AWS
 
-## To use the database
-
-> create file 
-
-- db.js
-
-> add to file:
-
-```sh
-module.exports =  {
-    database: '<database name>',
-    host: '<host name>',
-    port: '',
-    user: '<database user name >',
-    password: '<database user password >'
-}
-```

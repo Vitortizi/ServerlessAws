@@ -1,0 +1,55 @@
+service: nodeless
+useDotenv: true
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  region: sa-east-1
+  memorySize: 256
+
+functions:
+  hello:
+    handler: handler.hello
+  
+  getUser:
+    handler: handler.getUser
+    events:
+      - http:
+          path: users/{id}
+          method: get
+          cors: true
+        
+  getAllUser:
+    handler: handler.getAllUser
+    events:
+      - http:
+          path: users
+          method: get
+          cors: true
+
+  createUser:
+    handler: handler.createUser
+    events:
+      - http:
+          path: users
+          method: post
+          cors: true
+
+  updateUser:
+    handler: handler.updateUser
+    events:
+      - http:
+          path: users/{id}
+          method: put
+          cors: true
+
+  deleteUser:
+    handler: handler.deleteUser
+    events:
+      - http:
+          path: users/{id}
+          method: delete
+          cors: true

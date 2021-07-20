@@ -1,0 +1,21 @@
+{
+  "name": "nodeless",
+  "version": "1.0.0",
+  "description": "serverless create --template aws-nodejs --path nodeless",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy -v",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "postgresql-easy": "^1.2.5",
+    "remove": "^0.1.5"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

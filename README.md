@@ -31,7 +31,9 @@ serverless invoke -f hello -l
 ```
 
 ## Remove an AWS Application
-> serverless remove
+```sh 
+serverless remove
+```
 
 ## Tools used
 - JEST

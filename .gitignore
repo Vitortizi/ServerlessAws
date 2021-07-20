@@ -2,4 +2,4 @@
 
 .env
 .serverless
-config/db.js
+config/
